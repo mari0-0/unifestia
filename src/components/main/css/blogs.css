@@ -1,0 +1,24 @@
+.blogs{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right:40px;
+  padding: 10px;
+}
+
+.blog{
+  width: 60%;
+  height: auto;
+  position: relative;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.final {
+  padding-bottom: 5rem;
+}
+

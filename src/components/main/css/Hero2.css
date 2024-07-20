@@ -1,0 +1,57 @@
+#hero-2 {
+  height: 100vh;
+  background: linear-gradient(#FFF6E0, #e4e4e4, #FFF6E0);
+  overflow: hidden;
+}
+
+#container-hero-2 {
+  position: relative;
+  height: 100%;
+  display: flex;
+}
+
+/* .star {
+  position: absolute;
+  background-color: #181818;
+  border-radius: 100%;
+} */
+
+.circle {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at 30% 30%, #181818 25%, #020202);
+  border-radius: 100%;
+  margin: auto;
+  box-shadow: 0 0 100px 60px #ffffff80, inset -30px -30px 40px #ffffff90;
+  transition: all 0.75s ease-in-out;
+  z-index: 0;
+}
+
+/* .circle:hover {
+  box-shadow: 0 0 600px 400px #ffffffcc, inset -35px -30px 45px #ffffffdd;
+} */
+
+.blur {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff20;
+  width: 100%;
+  height: 50%;
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(80px);
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent 20%, #020202, transparent 80%) 1 0 0 0;
+  z-index: 20;
+}
+
+.noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/9a/512x512_Dissolve_Noise_Texture.png");
+  background-size: 256px;
+  mix-blend-mode: overlay;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 21;
+}

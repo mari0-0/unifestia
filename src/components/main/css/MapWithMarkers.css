@@ -1,0 +1,34 @@
+/* .marker .tooltip {
+  display: none;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: #FFF6E0;
+  border-radius: 5px;
+  padding: 10px;
+  white-space: nowrap;
+} */
+
+.marker:hover .tooltip {
+	display: block;
+}
+
+.marker {
+	background-image: radial-gradient(
+		rgb(250, 184, 184),
+		rgb(254, 144, 144),
+		rgb(255, 73, 73)
+	);
+}
+
+.active-btn {
+	background-color: #fca5a5;
+  transition: .5s;
+}
+
+.active-btn:hover{
+  background-color: #f87d7d;
+}
+
