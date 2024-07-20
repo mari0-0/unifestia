@@ -1,29 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./css/gallery.css";
-import { spawn } from "child_process";
-import { div } from "three/examples/jsm/nodes/Nodes.js";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import Marquee from "react-fast-marquee";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 const Gallery = () => {
-	const [currentCategory, setCurrentCategory] = useState("");
-	const [currentIndex, setCurrentIndex] = useState(0);
-
-	const categories = {
-		campus: ["campus/1.jpg", "6.jpg", "campus/3.jpeg", "campus/4.avif"],
-		events: ["1.jpeg", "2.jpeg", "3.jpeg"],
-		sports: ["sports/1.jpeg", "sports/2.jpeg", "sports/4.jpg"],
-		ncc: ["ncc/1.jpeg", "ncc/2.jpeg", "ncc/3.jpeg"],
-		cultural: ["cultural/1.jpeg", "cultural/2.jpg", "cultural/3.jpeg"],
-		activities: ["activities/1.jpeg", "activities/3.jpeg"],
-		college: [
-			"images/college1.jpg",
-			"images/college2.jpg",
-			"images/college3.jpg",
-		],
-	};
 
 	const nextHandler = () => {
 		const items = document.querySelectorAll(".item");
@@ -52,28 +34,9 @@ const Gallery = () => {
 		};
 	}, []);
 
-	const openCarousel = (category) => {
-		setCurrentCategory(category);
-		setCurrentIndex(0);
-		document.getElementById("carousel-image").src = categories[category][0];
-		document.getElementById("image-carousel").style.display = "flex";
-	};
 
-	const closeCarousel = () => {
-		document.getElementById("image-carousel").style.display = "none";
-	};
 
-	const changeSlide = (direction) => {
-		let newIndex = currentIndex + direction;
-		if (newIndex >= categories[currentCategory].length) {
-			newIndex = 0;
-		} else if (newIndex < 0) {
-			newIndex = categories[currentCategory].length - 1;
-		}
-		setCurrentIndex(newIndex);
-		document.getElementById("carousel-image").src =
-			categories[currentCategory][newIndex];
-	};
+
 
 	return (
 		<>

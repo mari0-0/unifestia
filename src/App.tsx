@@ -1,15 +1,9 @@
 import { useState, useEffect } from "react";
-import Hero from "./components/main/Hero";
-import Loader from "./components/main/Loader";
 import Navbar from "./components/main/Navbar";
-import HorizontalScroll from "./components/main/HorizontalScroll";
-import MapWithMarkers from "./components/main/MapWithMarkers";
-import ReactLenis, { useLenis } from "lenis/react";
-import Hero2 from "./components/main/Hero2";
-import AboutUs from "./components/main/AboutUs";
-import Events from "./components/main/Events";
+import ReactLenis from "lenis/react";
+
 import Footer from "./components/main/Footer";
-import WhyUnifestia from "./components/main/WhyUnifestia";
+
 import { Outlet } from "react-router-dom";
 
 function App() {

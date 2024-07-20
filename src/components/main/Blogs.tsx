@@ -1,4 +1,3 @@
-import React from "react";
 import "./css/blogs.css"
 import Navbar from "./Navbar";
 import Footer from "./Footer";
