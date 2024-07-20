@@ -14,9 +14,7 @@ const MapWithMarkers = () => {
 	const mapRef = useRef(null);
 	const eventsRef = useRef(null);
 	const [activeBtn, setActiveBtn] = useState("upcoming");
-	const [isSmallScrn, _] = useState(
-		window.innerWidth < 640 ? false : true
-	);
+	const [isSmallScrn, _] = useState(window.innerWidth < 640 ? false : true);
 	let places = upComingPlaces;
 
 	if (activeBtn === "upcoming") {
@@ -142,6 +140,8 @@ const MapWithMarkers = () => {
 						className="map-class mx-auto border-slate-200 border-2 max-w-lg h-full"
 					>
 						<img
+							height={400}
+							width={400}
 							src="./rvr map.jpg"
 							alt="College Map"
 							className="w-full h-full object-cover"
