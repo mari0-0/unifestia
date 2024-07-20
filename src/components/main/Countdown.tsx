@@ -17,7 +17,7 @@ function calculateCountdown(
 	month: string,
 	date: string,
 	time: string = "00:00"
-): TimeLeft {
+):TimeLeft {
 	const now = new Date();
 	const eventTime = new Date(`${month} ${date}, ${now.getFullYear()} ${time}`);
 	const timeDifference = eventTime.getTime() - now.getTime();

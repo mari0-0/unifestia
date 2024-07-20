@@ -7,7 +7,7 @@ import Footer from "./components/main/Footer";
 import { Outlet } from "react-router-dom";
 
 function App() {
-	const [loaderCompleted, setLoaderCompleted] = useState(false);
+	const [_, setLoaderCompleted] = useState(false);
 
 	useEffect(() => {
 		const timer = setTimeout(() => {

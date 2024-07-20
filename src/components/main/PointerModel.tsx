@@ -1,5 +1,5 @@
 import { OrbitControls, PerspectiveCamera, View } from "@react-three/drei";
-import { useRef, useEffect, Suspense } from "react";
+import { useRef } from "react";
 import Lights from "./Lights";
 import * as THREE from "three"
 import gsap from "gsap";

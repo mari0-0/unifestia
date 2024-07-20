@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
 	useGSAP(() => {
 		const logoElement: any = document.getElementById("logoNavbar");
-		const galleryLink: any = document.getElementsByClassName("galleryItem")[0];
-		const gallerySection: any = document.getElementById("gallery");
 
 		gsap.to(logoElement, {
 			rotation: 360,

@@ -6,37 +6,45 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 const Gallery = () => {
-
 	const nextHandler = () => {
 		const items = document.querySelectorAll(".item");
 		if (items.length > 0) {
-			document.querySelector(".slide").appendChild(items[0]);
+			const slideElement = document.querySelector(".slide");
+
+			if (slideElement) {
+				slideElement.appendChild(items[0]);
+			} else {
+				console.error("The element with class 'slide' was not found.");
+			}
 		}
 	};
 
 	const prevHandler = () => {
 		const items = document.querySelectorAll(".item");
 		if (items.length > 0) {
-			document.querySelector(".slide").prepend(items[items.length - 1]);
+			const slideElement = document.querySelector(".slide");
+			if (slideElement) {
+				slideElement.prepend(items[items.length - 1]);
+			} else {
+				console.error("The element with class 'slide' was not found.");
+			}
 		}
 	};
 
 	useEffect(() => {
 		const next = document.querySelector(".next");
 		const prev = document.querySelector(".prev");
-
-		next.addEventListener("click", nextHandler);
-		prev.addEventListener("click", prevHandler);
-
-		return () => {
-			next.removeEventListener("click", nextHandler);
-			prev.removeEventListener("click", prevHandler);
-		};
-	}, []);
-
-
-
-
+	
+		if (next && prev) {
+			next.addEventListener("click", nextHandler);
+			prev.addEventListener("click", prevHandler);
+	
+			return () => {
+				next.removeEventListener("click", nextHandler);
+				prev.removeEventListener("click", prevHandler);
+			};
+		}
+	}, [])
 
 	return (
 		<>

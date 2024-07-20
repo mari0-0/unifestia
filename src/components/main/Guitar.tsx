@@ -8,7 +8,7 @@ Title: Electric Guitar
 
 import { useGLTF } from '@react-three/drei'
 
-export function Guitar(props) {
+export function Guitar(props:any) {
   const { nodes, materials } = useGLTF('/electric_guitar/scene.gltf')
   return (
     <group {...props} dispose={null}>
@@ -20,24 +20,28 @@ export function Guitar(props) {
           <mesh
             castShadow
             receiveShadow
+            // @ts-ignore
             geometry={nodes.Corps_0.geometry}
             material={materials.Noir_plastique}
           />
           <mesh
             castShadow
             receiveShadow
+            // @ts-ignore
             geometry={nodes.Corps_1.geometry}
             material={materials.Noir_mtal}
           />
           <mesh
             castShadow
             receiveShadow
+            // @ts-ignore
             geometry={nodes.Corps_2.geometry}
             material={materials.Blanc}
           />
           <mesh
             castShadow
             receiveShadow
+            // @ts-ignore
             geometry={nodes.Corps_3.geometry}
             material={materials.Mtal}
           />
@@ -48,18 +52,21 @@ export function Guitar(props) {
             <mesh
               castShadow
               receiveShadow
+              // @ts-ignore
               geometry={nodes['R��glage_Tone_0'].geometry}
               material={materials.Noir_plastique}
             />
             <mesh
               castShadow
               receiveShadow
+              // @ts-ignore
               geometry={nodes['R��glage_Tone_1'].geometry}
               material={materials.Mtal}
             />
             <mesh
               castShadow
               receiveShadow
+              // @ts-ignore
               geometry={nodes['R��glage_Tone_2'].geometry}
               material={materials.Noir_mtal}
             />
@@ -67,6 +74,7 @@ export function Guitar(props) {
           <mesh
             castShadow
             receiveShadow
+            // @ts-ignore
             geometry={nodes.Manche002_0.geometry}
             material={materials.Manche}
             position={[2.337, -0.207, 0.042]}
@@ -76,6 +84,7 @@ export function Guitar(props) {
           <mesh
             castShadow
             receiveShadow
+            // @ts-ignore
             geometry={nodes.Corde_Mi_Grave_0.geometry}
             material={materials.Mtal}
             position={[1.577, -0.273, -0.081]}
@@ -85,6 +94,7 @@ export function Guitar(props) {
           <mesh
             castShadow
             receiveShadow
+            // @ts-ignore
             geometry={nodes.Corde_La_0.geometry}
             material={materials.Mtal}
             position={[1.843, -0.273, -0.04]}
@@ -94,6 +104,7 @@ export function Guitar(props) {
           <mesh
             castShadow
             receiveShadow
+            // @ts-ignore
             geometry={nodes['Corde_R��_0'].geometry}
             material={materials.Mtal}
             position={[2.171, -0.273, -0.012]}
@@ -103,6 +114,7 @@ export function Guitar(props) {
           <mesh
             castShadow
             receiveShadow
+            // @ts-ignore
             geometry={nodes.Corde_Sol_0.geometry}
             material={materials.Mtal}
             position={[2.224, -0.273, 0.106]}
@@ -112,6 +124,7 @@ export function Guitar(props) {
           <mesh
             castShadow
             receiveShadow
+            // @ts-ignore
             geometry={nodes.Corde_Si_0.geometry}
             material={materials.Mtal}
             position={[1.766, -0.271, 0.144]}
@@ -121,6 +134,7 @@ export function Guitar(props) {
           <mesh
             castShadow
             receiveShadow
+            // @ts-ignore
             geometry={nodes.Corde_Mi_0.geometry}
             material={materials.Mtal}
             position={[1.08, -0.267, 0.199]}
@@ -130,6 +144,7 @@ export function Guitar(props) {
           <mesh
             castShadow
             receiveShadow
+            // @ts-ignore
             geometry={nodes['R��glages_corde_0'].geometry}
             material={materials.Mtal}
             position={[3.324, -0.28, 0.023]}
@@ -139,6 +154,7 @@ export function Guitar(props) {
           <mesh
             castShadow
             receiveShadow
+            // @ts-ignore
             geometry={nodes.Boutons_0.geometry}
             material={materials.Mtal}
             position={[3.48, -0.198, 0.315]}

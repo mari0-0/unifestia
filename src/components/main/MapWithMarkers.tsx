@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import "./css/MapWithMarkers.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 import { completedPlaces, upComingPlaces } from "@/constants";
 import { CiClock2 } from "react-icons/ci";
 import { BiLinkAlt } from "react-icons/bi";
@@ -15,7 +14,7 @@ const MapWithMarkers = () => {
 	const mapRef = useRef(null);
 	const eventsRef = useRef(null);
 	const [activeBtn, setActiveBtn] = useState("upcoming");
-	const [isSmallScrn, setIsSmallScrn] = useState(
+	const [isSmallScrn, _] = useState(
 		window.innerWidth < 640 ? false : true
 	);
 	let places = upComingPlaces;

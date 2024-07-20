@@ -233,7 +233,7 @@ function calculateCountdown(
 	else return true;
 }
 
-function LayoutGridIcon(props) {
+function LayoutGridIcon(props: any) {
 	return (
 		<svg
 			{...props}
@@ -255,7 +255,7 @@ function LayoutGridIcon(props) {
 	);
 }
 
-function ListIcon(props) {
+function ListIcon(props: any) {
 	return (
 		<svg
 			{...props}

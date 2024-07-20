@@ -5,11 +5,10 @@ import {
 	PerspectiveCamera,
 	View,
 } from "@react-three/drei";
-import { useRef, Suspense } from "react";
+import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { useGSAP } from "@gsap/react";
 import { Guitar } from "./Guitar";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -17,23 +16,22 @@ gsap.registerPlugin(ScrollTrigger);
 const GuitarModel = () => {
 	const cameraRef = useRef(null);
 
-	useGSAP(() => {
-		if (cameraRef.current) {
-			gsap.to(cameraRef.current.position, {
+  useEffect(() => {
+    if (cameraRef.current) {
+      gsap.to(cameraRef.current.position, {
 				y: -30,
 				z: 35,
-        // x: 0,
-				scrollTrigger: {
-					trigger: "#canvas",
-					start: "top 10%",
-					end: "70% 20%",
-					scrub: 1,
-					// pin: true,
-					// markers: true
-				},
-			});
-		}
-	}, [cameraRef.current]);
+        scrollTrigger: {
+          trigger: "#pointerObj",
+          start: "top 10%",
+          end: "bottom 60%",
+          scrub: 1,
+          // pin: true,
+          // markers: true
+        },
+      });
+    }
+  }, []);
 
 	return (
 		<View className={`w-full h-full absolute`}>
